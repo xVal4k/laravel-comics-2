@@ -37,5 +37,5 @@ Route::get('/card{id}', function($id) {
 })->name('card');
 
 Route::get('/blank_page', function () {
-    return view('guest/template/blank');
+    return view('guest/blank');
 })->name('blank_page');
