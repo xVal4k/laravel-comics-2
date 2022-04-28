@@ -11,12 +11,49 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 2rem 0;
+        padding: 5rem 0;
         position: relative;
-        a {
+        .title {
+            margin-bottom: 1.2rem;
+            font-size: 40px;
+        }
+        img {
+            width: 175px;
             position: absolute;
-            top: 0;
+            top: -2.5rem;
             left: 0;
+            transform: translateY(-100%);
+        }
+        .price {
+            display: flex;
+            background: #55BA59;
+            color: white;
+            margin-bottom: 1.2rem;
+            .price_left {
+                display: flex;
+                justify-content: space-between;
+                flex-grow: 1;
+                padding: 1rem 1.5rem;
+                border-right: solid 2px grey;
+                color: #80fa84;
+                .white_text {
+                    color: white;
+                }
+            }
+            .price_right {
+                text-align: center;
+                padding: 1rem 1.5rem;
+                flex-basis: 20%;
+                a {
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+        .descr {
+            color: gray;
+            line-height: 1.5rem;
+            letter-spacing: .5px;
         }
     }
 
