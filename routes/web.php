@@ -20,7 +20,7 @@ Route::get('/', function () {
         'title'  => 'laravel-comics'
     ];
 
-    return view('guest.home', $data);
+    return view('guest/home', $data);
 })->name('home');
 
 Route::get('/card{id}', function($id) {
@@ -29,7 +29,7 @@ Route::get('/card{id}', function($id) {
     $selectedComic = $comics->firstWhere('id', $id);
     if ( $selectedComic === null ) abort(404);
 
-    return view('guest.card', [
+    return view('guest/card', [
         'title' => $selectedComic['title'],
         'comics' => $comics,
         'product' => $selectedComic

@@ -3,11 +3,10 @@
         <img src="./images/jumbotron.jpg" alt="">
     </section>
 
-    <section id="sec_2">
-
-        <div class="curr_series {{ Route::currentRouteName() != 'home' ? 'disp_none' : '' }}">CURRENT SERIES</div>
-        @yield('content')
-        <div class="container {{ Route::currentRouteName() != 'home' ? 'disp_none' : '' }}">
+    @yield('content')
+    <section id="sec_2" class="{{ Route::currentRouteName() != 'home' ? 'disp_none' : '' }}">
+        <div class="curr_series">CURRENT SERIES</div>
+        <div class="container">
             @foreach ($comics as $card)
                 <div class="card">
                     <a href="{{ route('card', ['id' => $card['id']]) }}">
@@ -16,7 +15,9 @@
                 </div>
             @endforeach
         </div>
-        <a class="btn {{ Route::currentRouteName() != 'home' ? 'disp_none' : '' }}" href="{{ route('blank_page') }}">LOAD MORE</a>
+        <div class="button_cont">
+            <a class="btn" href="{{ route('blank_page') }}">LOAD MORE</a>
+        </div>
     </section>
 
     <section id="sec_3" class="{{ Route::currentRouteName() != 'home' ? 'disp_none' : '' }}">

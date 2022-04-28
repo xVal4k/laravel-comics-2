@@ -7,13 +7,23 @@ main {
         }
     }
 
-    #sec_2 {
-        position: relative;
-        background: #1c1c1c;
-        padding: 1rem 0;
+    .card_cont {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 2rem 0;
+        position: relative;
+        a {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    #sec_2 {
+        position: relative;
+        background: #1c1c1c;
+        padding: 1.5rem 0;
         .curr_series {
             position: absolute;
             background: #0282f9;
@@ -48,25 +58,17 @@ main {
             }
         }
 
-        .disp_none {
-            display: none;
-        }
-
-        .card_cont {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 2rem 0;
-            position: relative;
-        }
-
-        .btn {
-            background: #0282f9;
-            color: white;
-            font-weight: bold;
-            padding: 0.5rem 3rem;
-            text-decoration: none;
-            cursor: pointer;
+        .button_cont {
+            text-align: center;
+            margin-bottom: 1rem;
+            .btn {
+                background: #0282f9;
+                color: white;
+                font-weight: bold;
+                padding: 0.5rem 3rem;
+                text-decoration: none;
+                cursor: pointer;
+            }
         }
     }
 
